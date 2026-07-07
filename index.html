@@ -1,0 +1,1620 @@
+<!doctype html> <html lang="ja"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <meta name="theme-color" content="#ed007d"> <title>サンリー金沢県庁店｜毎週末、家族で楽しめる住まいの相談拠点</title> <meta name="description" content="サンリー金沢県庁店グランドオープン。毎週末はキッズ体験、スポーツイベント、暮らしのセミナー、キッチンカーを開催。売買・賃貸・注文住宅まで住まいの相談もお気軽に。"> <style> :root{ --pink:#ed007d; --pink-dark:#c70067; --aqua:#05a9cf; --orange:#f56f1f; --green:#38a852; --yellow:#ffe34f; --ink:#252525; --muted:#6f6f6f; --paper:#fffdfa; --line:#ebe6df; --soft-pink:#fff0f7; --soft-aqua:#ebfaff; --soft-green:#eefaf0; --shadow:0 18px 42px rgba(44,25,33,.12); --radius-xl:32px; --radius-lg:24px; --radius-md:18px; --radius-sm:12px; }
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 12% 8%, rgba(255,227,79,.18) 0 44px, transparent 45px),
+    radial-gradient(circle at 87% 15%, rgba(5,169,207,.13) 0 70px, transparent 71px),
+    var(--paper);
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+img,svg{max-width:100%}
+.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+.section{padding:92px 0}
+.section-title{
+  margin:0;
+  font-size:clamp(29px,4vw,48px);
+  line-height:1.22;
+  letter-spacing:.02em;
+  font-weight:900;
+}
+.section-lead{
+  max-width:720px;
+  margin:18px 0 0;
+  color:#565656;
+  font-size:16px;
+}
+
+.top-stripe{
+  height:18px;
+  background:repeating-linear-gradient(
+    90deg,
+    var(--pink) 0 56px,
+    #fff 56px 76px,
+    var(--aqua) 76px 132px,
+    #fff 132px 152px,
+    var(--orange) 152px 208px,
+    #fff 208px 228px
+  );
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(255,253,250,.92);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(235,230,223,.9);
+}
+
+.header-inner{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width:0;
+}
+
+.brand-mark{
+  position:relative;
+  width:42px;
+  height:42px;
+  flex:0 0 42px;
+}
+
+.brand-mark span{
+  position:absolute;
+  border-radius:50%;
+  display:block;
+}
+
+.brand-mark .p1{width:22px;height:22px;background:var(--pink);left:0;top:10px}
+.brand-mark .p2{width:21px;height:21px;background:var(--green);right:0;top:4px}
+.brand-mark .p3{width:19px;height:19px;background:var(--aqua);right:1px;bottom:2px}
+.brand-mark .p4{width:11px;height:11px;background:var(--yellow);left:13px;top:0}
+.brand-mark i{
+  position:absolute;
+  width:27px;
+  height:8px;
+  left:9px;
+  top:17px;
+  background:#fff;
+  border-radius:10px;
+  transform:rotate(-17deg);
+}
+
+.brand-text{display:flex;flex-direction:column;line-height:1.1}
+.brand-text strong{font-size:16px;letter-spacing:.04em}
+.brand-text small{font-size:11px;color:var(--muted);margin-top:4px;font-weight:700}
+
+.nav{display:flex;align-items:center;gap:23px}
+.nav a{
+  font-size:14px;
+  font-weight:800;
+  transition:.2s ease;
+}
+.nav a:hover{color:var(--pink)}
+.nav .nav-cta{
+  background:var(--pink);
+  color:#fff;
+  padding:11px 17px;
+  border-radius:999px;
+  box-shadow:0 8px 16px rgba(237,0,125,.22);
+}
+
+.menu-button{
+  display:none;
+  width:44px;
+  height:44px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#fff;
+  position:relative;
+}
+.menu-button span,.menu-button:before,.menu-button:after{
+  content:"";
+  position:absolute;
+  left:12px;
+  width:20px;
+  height:2px;
+  background:var(--ink);
+  border-radius:2px;
+  transition:.25s ease;
+}
+.menu-button span{top:21px}
+.menu-button:before{top:14px}
+.menu-button:after{top:28px}
+.menu-button.active span{opacity:0}
+.menu-button.active:before{top:21px;transform:rotate(45deg)}
+.menu-button.active:after{top:21px;transform:rotate(-45deg)}
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  padding:70px 0 82px;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.45),rgba(255,253,250,.94)),
+    linear-gradient(120deg,#fff1f7 0%,#fdfdff 48%,#eafaff 100%);
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 7% 65%,rgba(245,111,31,.13) 0 30px,transparent 31px),
+    radial-gradient(circle at 88% 32%,rgba(237,0,125,.12) 0 74px,transparent 75px),
+    radial-gradient(circle at 78% 77%,rgba(56,168,82,.13) 0 46px,transparent 47px);
+  pointer-events:none;
+}
+
+.hero-grid{
+  position:relative;
+  display:grid;
+  grid-template-columns:1.02fr .98fr;
+  align-items:center;
+  gap:42px;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:9px 14px;
+  border-radius:999px;
+  background:#fff;
+  border:1px solid rgba(237,0,125,.18);
+  color:var(--pink);
+  font-size:13px;
+  font-weight:900;
+  box-shadow:0 10px 22px rgba(237,0,125,.08);
+}
+.eyebrow:before{
+  content:"";
+  width:9px;height:9px;border-radius:50%;
+  background:var(--pink);
+  box-shadow:16px 0 0 var(--aqua),32px 0 0 var(--orange);
+  margin-right:30px;
+}
+
+.hero-title{
+  margin:20px 0 0;
+  font-size:clamp(42px,6vw,76px);
+  font-weight:950;
+  line-height:1.08;
+  letter-spacing:.01em;
+}
+
+.hero-title .accent{
+  display:inline-block;
+  color:var(--pink);
+  position:relative;
+  z-index:1;
+}
+.hero-title .accent:after{
+  content:"";
+  position:absolute;
+  height:13px;
+  left:-3px;right:-3px;bottom:2px;
+  background:rgba(255,227,79,.92);
+  z-index:-1;
+  transform:skewX(-11deg);
+  border-radius:999px;
+}
+
+.hero-title .green{color:var(--green)}
+.hero-copy{
+  margin:24px 0 0;
+  max-width:600px;
+  color:#474747;
+  font-size:17px;
+  font-weight:600;
+}
+
+.hero-badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:23px;
+}
+
+.hero-badge{
+  padding:8px 12px;
+  border-radius:999px;
+  background:#fff;
+  font-size:13px;
+  font-weight:800;
+  border:1px solid var(--line);
+}
+
+.hero-badge b{color:var(--pink)}
+
+.hero-actions{
+  margin-top:28px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.button{
+  min-height:54px;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  padding:12px 21px;
+  border-radius:999px;
+  border:1px solid transparent;
+  font-weight:900;
+  font-size:15px;
+  transition:.22s ease;
+}
+
+.button:hover{transform:translateY(-2px)}
+.button-primary{
+  color:#fff;
+  background:var(--pink);
+  box-shadow:0 10px 20px rgba(237,0,125,.24);
+}
+.button-primary:hover{background:var(--pink-dark)}
+.button-secondary{
+  background:#fff;
+  border-color:rgba(237,0,125,.22);
+  color:var(--pink);
+}
+
+.hero-visual{
+  position:relative;
+  min-height:440px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-card{
+  width:min(100%,510px);
+  position:relative;
+  border-radius:34px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:var(--shadow);
+  border:7px solid #fff;
+}
+
+.card-stripe{
+  height:22px;
+  background:repeating-linear-gradient(
+    90deg,
+    var(--pink) 0 47px,
+    #fff 47px 65px,
+    var(--aqua) 65px 112px,
+    #fff 112px 130px,
+    var(--orange) 130px 177px,
+    #fff 177px 195px
+  );
+}
+
+.hero-card-inner{
+  position:relative;
+  padding:26px 26px 22px;
+  background:
+    radial-gradient(circle at 88% 14%,rgba(255,227,79,.7) 0 15px, transparent 16px),
+    radial-gradient(circle at 12% 20%,rgba(5,169,207,.12) 0 27px, transparent 28px),
+    #fff;
+}
+
+.open-date{
+  position:absolute;
+  right:19px;
+  top:18px;
+  min-width:126px;
+  padding:10px 14px;
+  border:3px solid var(--pink);
+  color:var(--pink);
+  font-size:17px;
+  font-weight:950;
+  background:#fff;
+  border-radius:50% 45% 52% 46%;
+  text-align:center;
+  transform:rotate(-3deg);
+  line-height:1.1;
+}
+
+.open-date span{
+  color:var(--ink);
+  font-size:11px;
+  display:block;
+  margin-top:2px;
+}
+
+.grand-open{
+  margin:3px 0 14px;
+  color:var(--pink);
+  font-size:clamp(37px,5vw,60px);
+  letter-spacing:-.05em;
+  line-height:.95;
+  font-weight:1000;
+  text-shadow:3px 3px 0 rgba(56,168,82,.45);
+}
+
+.grand-open .green{color:var(--green)}
+
+.house-scene{
+  position:relative;
+  min-height:238px;
+  margin-top:4px;
+  border-radius:20px;
+  overflow:hidden;
+  background:
+    linear-gradient(180deg,#ddf6ff 0 52%,#d9efd3 52% 100%);
+}
+
+.sun{
+  position:absolute;
+  width:52px;height:52px;border-radius:50%;
+  top:24px;right:46px;background:var(--yellow);
+  box-shadow:0 0 0 10px rgba(255,227,79,.22);
+}
+
+.cloud,.cloud:before,.cloud:after{
+  position:absolute;
+  display:block;
+  content:"";
+  background:#fff;
+  border-radius:999px;
+}
+.cloud{width:68px;height:18px;left:30px;top:42px;opacity:.9}
+.cloud:before{width:28px;height:28px;left:11px;bottom:0}
+.cloud:after{width:34px;height:34px;right:8px;bottom:0}
+
+.ground-line{
+  position:absolute;
+  left:0;right:0;bottom:35px;
+  height:7px;background:#78b964;
+  opacity:.65;
+}
+
+.house{
+  position:absolute;
+  width:80%;
+  max-width:390px;
+  height:160px;
+  left:50%;
+  bottom:35px;
+  transform:translateX(-50%);
+}
+
+.roof{
+  position:absolute;
+  top:0;
+  left:1%;
+  width:98%;
+  height:72px;
+  background:linear-gradient(145deg,#4a3d3a,#201b1a);
+  clip-path:polygon(10% 0,75% 0,100% 47%,90% 47%,90% 100%,7% 100%,7% 47%,0 47%);
+  border-radius:10px;
+}
+
+.house-body{
+  position:absolute;
+  left:8%;
+  bottom:0;
+  width:82%;
+  height:108px;
+  background:linear-gradient(90deg,#b79672 0 38%,#f5f1eb 38% 100%);
+  border:5px solid #4b3930;
+  border-top:0;
+  box-shadow:inset 0 7px rgba(255,255,255,.36);
+}
+
+.house-body:before{
+  content:"";
+  position:absolute;
+  width:42%;
+  height:84px;
+  left:5%;
+  bottom:0;
+  background:repeating-linear-gradient(90deg,rgba(81,61,47,.42) 0 2px,transparent 2px 13px);
+  border-right:4px solid #5d493c;
+}
+
+.house-door{
+  position:absolute;
+  width:22%;
+  height:76px;
+  right:13%;
+  bottom:0;
+  background:linear-gradient(90deg,#5a4134,#87634f);
+  border:4px solid #4c382e;
+}
+.house-door:after{
+  content:"";
+  position:absolute;
+  width:7px;height:7px;border-radius:50%;
+  right:8px;top:38px;background:var(--yellow);
+}
+
+.house-window{
+  position:absolute;
+  width:20%;
+  height:42px;
+  right:42%;
+  top:29px;
+  background:#a8e5ef;
+  border:4px solid #4d4139;
+  box-shadow:inset 0 0 0 3px rgba(255,255,255,.38);
+}
+
+.tree{
+  position:absolute;
+  bottom:35px;
+  width:50px;height:80px;
+}
+.tree:before{
+  content:"";
+  position:absolute;
+  width:46px;height:46px;border-radius:50%;
+  background:#4fac54;
+  top:0;left:2px;
+  box-shadow:-12px 18px 0 -7px #5fc264,13px 19px 0 -8px #3d9950;
+}
+.tree:after{
+  content:"";
+  position:absolute;
+  width:8px;height:37px;background:#745342;
+  left:21px;bottom:0;border-radius:10px;
+}
+.tree.left{left:12px}
+.tree.right{right:16px;transform:scale(.8)}
+
+.mini-event-note{
+  margin-top:16px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 14px;
+  background:var(--soft-pink);
+  border-radius:14px;
+  color:#5d2444;
+  font-size:13px;
+  font-weight:800;
+}
+.mini-event-note strong{color:var(--pink)}
+
+.float-note{
+  position:absolute;
+  padding:11px 14px;
+  border-radius:15px;
+  background:#fff;
+  box-shadow:0 14px 28px rgba(39,30,33,.16);
+  font-size:13px;
+  font-weight:900;
+  line-height:1.35;
+  z-index:3;
+}
+.float-note.one{left:-12px;top:74px;color:var(--aqua);transform:rotate(-4deg)}
+.float-note.two{right:-12px;bottom:44px;color:var(--orange);transform:rotate(4deg)}
+.float-note:after{
+  content:"";
+  position:absolute;
+  width:13px;height:13px;
+  bottom:-5px;
+  left:20px;
+  background:#fff;
+  transform:rotate(45deg);
+}
+
+.family-bar{
+  padding:26px 0;
+  background:var(--pink);
+  color:#fff;
+  overflow:hidden;
+}
+.family-bar-inner{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:28px;
+  flex-wrap:wrap;
+  text-align:center;
+  font-weight:900;
+}
+.family-bar strong{font-size:clamp(20px,3vw,31px);line-height:1.25}
+.family-dots{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+.family-dots span{
+  width:12px;height:12px;border-radius:50%;
+  display:block;
+  background:#fff;
+}
+.family-dots span:nth-child(2){background:var(--yellow)}
+.family-dots span:nth-child(3){background:#83eaff}
+.family-dots span:nth-child(4){background:#ffb587}
+
+.value-grid{
+  margin-top:44px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.value-card{
+  position:relative;
+  padding:27px 24px;
+  border:1px solid var(--line);
+  border-radius:var(--radius-lg);
+  background:#fff;
+  overflow:hidden;
+  box-shadow:0 10px 28px rgba(40,40,40,.05);
+}
+.value-card:before{
+  content:"";
+  position:absolute;
+  width:78px;height:78px;border-radius:50%;
+  right:-21px;top:-23px;
+  background:rgba(237,0,125,.10);
+}
+.value-card:nth-child(2):before{background:rgba(5,169,207,.13)}
+.value-card:nth-child(3):before{background:rgba(56,168,82,.13)}
+.value-number{
+  color:var(--pink);
+  font-size:13px;
+  font-weight:950;
+  letter-spacing:.08em;
+}
+.value-card:nth-child(2) .value-number{color:var(--aqua)}
+.value-card:nth-child(3) .value-number{color:var(--green)}
+.value-card h3{margin:9px 0 8px;font-size:21px;line-height:1.35}
+.value-card p{margin:0;color:#666;font-size:14px}
+
+.events{
+  position:relative;
+  background:
+    radial-gradient(circle at 93% 10%,rgba(237,0,125,.08) 0 90px,transparent 91px),
+    radial-gradient(circle at 6% 88%,rgba(5,169,207,.09) 0 110px,transparent 111px),
+    #fff8fb;
+}
+
+.event-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.event-head-note{
+  max-width:370px;
+  padding:13px 16px;
+  border-radius:15px;
+  background:#fff;
+  color:#5c5c5c;
+  font-size:13px;
+  border:1px solid rgba(237,0,125,.14);
+}
+
+.event-grid{
+  margin-top:42px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.event-card{
+  position:relative;
+  min-height:404px;
+  padding:22px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  overflow:hidden;
+  border-radius:28px;
+  color:#fff;
+  box-shadow:var(--shadow);
+  isolation:isolate;
+}
+.event-card:after{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 12%,rgba(18,20,26,.77) 100%);
+  z-index:-1;
+}
+
+.event-card.sport{
+  background:
+    radial-gradient(circle at 75% 18%,#ffe14b 0 27px,transparent 28px),
+    linear-gradient(145deg,#10bad8,#4d6ccc 67%,#232f7d);
+}
+
+.event-card.seminar{
+  background:
+    radial-gradient(circle at 82% 17%,#ffc8e1 0 33px,transparent 34px),
+    linear-gradient(145deg,#ff8ab8,#ee4c8f 56%,#9d2364);
+}
+
+.event-card.food{
+  background:
+    radial-gradient(circle at 76% 14%,#ffe885 0 28px,transparent 29px),
+    linear-gradient(145deg,#ffac49,#f16b20 55%,#aa3018);
+}
+
+.event-art{
+  position:absolute;
+  inset:0 0 auto 0;
+  height:232px;
+  z-index:-1;
+}
+
+.ball{
+  position:absolute;
+  width:100px;height:100px;border-radius:50%;
+  top:39px;left:50%;
+  transform:translateX(-50%);
+  background:conic-gradient(#f5f5f5 0 10%,#1a2766 10% 20%,#f5f5f5 20% 30%,#1a2766 30% 40%,#f5f5f5 40% 50%,#1a2766 50% 60%,#f5f5f5 60% 70%,#1a2766 70% 80%,#f5f5f5 80% 90%,#1a2766 90% 100%);
+  box-shadow:0 18px 24px rgba(0,0,0,.18);
+}
+.net{
+  position:absolute;
+  height:112px;
+  width:3px;
+  background:rgba(255,255,255,.82);
+  left:50%;bottom:0;
+  box-shadow:10px 0 0 rgba(255,255,255,.34),20px 0 0 rgba(255,255,255,.2),-10px 0 0 rgba(255,255,255,.34),-20px 0 0 rgba(255,255,255,.2);
+}
+.person{
+  position:absolute;
+  width:54px;height:110px;bottom:0;
+}
+.person:before{
+  content:"";
+  width:35px;height:35px;border-radius:50%;
+  position:absolute;left:10px;top:0;background:#ffe0c1;
+}
+.person:after{
+  content:"";
+  position:absolute;left:7px;bottom:0;width:40px;height:78px;border-radius:18px 18px 6px 6px;background:#fff;
+}
+.person.left{left:17%;transform:rotate(-10deg)}
+.person.right{right:17%;transform:rotate(10deg)}
+.person.right:after{background:#f7c836}
+
+.box-stack{
+  position:absolute;bottom:22px;left:0;right:0;height:155px;
+}
+.box{
+  position:absolute;
+  border:4px solid rgba(255,255,255,.93);
+  background:rgba(255,255,255,.24);
+  box-shadow:inset 0 5px rgba(255,255,255,.25);
+}
+.box.b1{width:138px;height:72px;left:25px;bottom:4px}
+.box.b2{width:110px;height:58px;left:123px;bottom:75px}
+.box.b3{width:94px;height:57px;right:24px;bottom:16px}
+.box:before{
+  content:"";
+  position:absolute;left:0;right:0;top:50%;
+  height:3px;background:rgba(255,255,255,.78);
+}
+.hanger{
+  position:absolute;top:36px;right:35px;width:84px;height:70px;border-bottom:5px solid #fff;border-radius:50%;
+  transform:rotate(-10deg);
+}
+.hanger:before{
+  content:"";
+  position:absolute;width:20px;height:24px;border:4px solid #fff;border-bottom:0;border-radius:13px 13px 0 0;left:30px;top:-17px;
+}
+
+.food-truck{
+  position:absolute;
+  left:50%;bottom:18px;
+  width:214px;height:110px;
+  transform:translateX(-50%);
+  background:#fff7dd;
+  border-radius:16px 16px 8px 8px;
+  box-shadow:0 13px 22px rgba(0,0,0,.14);
+}
+.food-truck:before{
+  content:"";
+  position:absolute;
+  width:118px;height:67px;left:15px;top:16px;
+  background:#ffcf5a;
+  border-radius:8px;
+  box-shadow:128px 0 0 -49px #ffe9ba;
+}
+.food-truck:after{
+  content:"";
+  position:absolute;width:28px;height:28px;border-radius:50%;
+  left:27px;bottom:-14px;background:#2d2d2d;
+  box-shadow:132px 0 0 #2d2d2d;
+}
+.awning{
+  position:absolute;left:15px;top:8px;width:125px;height:18px;
+  background:repeating-linear-gradient(90deg,#f85151 0 16px,#fff 16px 32px);
+  border-radius:8px 8px 0 0;
+}
+.steam,.steam:before,.steam:after{
+  position:absolute;
+  width:9px;height:32px;border:4px solid rgba(255,255,255,.82);border-bottom:0;border-left:0;border-radius:50%;
+}
+.steam{right:58px;top:22px;transform:rotate(-9deg)}
+.steam:before{content:"";right:16px;top:-14px}
+.steam:after{content:"";right:-4px;top:-29px}
+
+.event-tag{
+  align-self:flex-start;
+  display:inline-flex;
+  padding:7px 11px;
+  border-radius:999px;
+  background:rgba(255,255,255,.94);
+  color:var(--ink);
+  font-size:12px;
+  font-weight:900;
+}
+.event-card h3{
+  margin:14px 0 8px;
+  font-size:25px;
+  line-height:1.28;
+}
+.event-card p{margin:0;font-size:14px;color:rgba(255,255,255,.94)}
+.event-foot{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:15px;
+  font-size:13px;
+  font-weight:800;
+}
+
+.event-info{
+  margin-top:30px;
+  padding:16px 20px;
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  border-radius:16px;
+  background:#fff;
+  border:1px solid rgba(237,0,125,.15);
+  color:#555;
+  font-size:14px;
+}
+.event-info b{color:var(--pink);white-space:nowrap}
+
+.consult{
+  position:relative;
+  overflow:hidden;
+  background:#fff;
+}
+.consult:before{
+  content:"";
+  position:absolute;
+  width:420px;height:420px;border-radius:50%;
+  left:-230px;bottom:-255px;
+  background:rgba(56,168,82,.1);
+}
+
+.consult-grid{
+  position:relative;
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:52px;
+  align-items:center;
+}
+
+.consult-list{
+  display:grid;
+  gap:12px;
+  margin-top:29px;
+}
+
+.consult-item{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:15px 17px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  box-shadow:0 7px 18px rgba(44,44,44,.04);
+  font-weight:800;
+  font-size:15px;
+}
+
+.consult-icon{
+  width:37px;height:37px;border-radius:12px;
+  flex:0 0 37px;
+  display:grid;place-items:center;
+  background:var(--soft-green);
+  color:var(--green);
+  font-weight:950;
+  font-size:18px;
+}
+
+.consult-visual{
+  position:relative;
+  min-height:420px;
+  border-radius:32px;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 84% 20%,rgba(255,227,79,.8) 0 30px,transparent 31px),
+    linear-gradient(135deg,#effdf2 0%,#f9fffb 100%);
+  border:1px solid #e0f0e2;
+}
+
+.consult-visual .floor{
+  position:absolute;left:0;right:0;bottom:0;height:31%;
+  background:linear-gradient(180deg,#d7ba91,#c7a073);
+}
+
+.sofa{
+  position:absolute;left:12%;bottom:28%;
+  width:47%;height:104px;
+  background:#f27a9d;
+  border-radius:26px 26px 12px 12px;
+  box-shadow:inset 0 12px rgba(255,255,255,.2),0 12px 18px rgba(89,41,56,.16);
+}
+.sofa:before{
+  content:"";
+  position:absolute;left:9%;top:17px;width:30%;height:55px;border-radius:15px;background:#f8acc3;
+  box-shadow:123px 0 0 #f8acc3;
+}
+.sofa:after{
+  content:"";
+  position:absolute;width:12px;height:42px;bottom:-36px;left:24px;background:#6c5545;
+  box-shadow:178px 0 0 #6c5545;
+}
+
+.plant{
+  position:absolute;right:11%;bottom:29%;
+  width:74px;height:170px;
+}
+.plant:before{
+  content:"";
+  position:absolute;bottom:0;left:15px;width:46px;height:61px;border-radius:12px 12px 19px 19px;background:#e9a75e;
+}
+.plant:after{
+  content:"";
+  position:absolute;left:0;top:0;width:72px;height:110px;
+  background:
+    radial-gradient(ellipse at 25% 70%,#55ad61 0 16px,transparent 17px),
+    radial-gradient(ellipse at 66% 68%,#62bd69 0 17px,transparent 18px),
+    radial-gradient(ellipse at 40% 35%,#4d9e57 0 18px,transparent 19px),
+    radial-gradient(ellipse at 77% 21%,#62bd69 0 15px,transparent 16px);
+}
+
+.frame{
+  position:absolute;right:23%;top:16%;
+  width:136px;height:116px;background:#fff;border:10px solid #f1c870;
+  box-shadow:0 13px 18px rgba(34,34,34,.08);
+}
+.frame:before{
+  content:"";
+  position:absolute;inset:15px;
+  background:linear-gradient(150deg,#8ad4ff,#f8d771 45%,#85c776 46%);
+}
+
+.speech{
+  position:absolute;
+  top:23px;left:24px;
+  width:182px;
+  padding:15px;
+  background:#fff;
+  border-radius:18px;
+  color:var(--pink);
+  font-weight:900;
+  font-size:14px;
+  box-shadow:0 14px 24px rgba(34,34,34,.08);
+}
+.speech:after{
+  content:"";
+  position:absolute;left:29px;bottom:-9px;width:18px;height:18px;
+  background:#fff;transform:rotate(45deg);
+}
+
+.form-section{
+  background:
+    radial-gradient(circle at 8% 18%,rgba(5,169,207,.11) 0 75px,transparent 76px),
+    radial-gradient(circle at 91% 83%,rgba(245,111,31,.11) 0 100px,transparent 101px),
+    #fff6fa;
+}
+
+.form-shell{
+  margin-top:38px;
+  background:#fff;
+  border-radius:32px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  border:1px solid rgba(237,0,125,.13);
+}
+
+.form-top{
+  padding:29px 34px;
+  background:linear-gradient(120deg,var(--pink),#f345a1);
+  color:#fff;
+}
+
+.form-top h3{margin:0;font-size:25px;line-height:1.3}
+.form-top p{margin:8px 0 0;font-size:14px;color:rgba(255,255,255,.93)}
+
+form{padding:31px 34px 34px}
+.form-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+.field.full{grid-column:1/-1}
+.field label{
+  display:block;
+  margin:0 0 8px;
+  font-size:14px;
+  font-weight:900;
+}
+.required{
+  display:inline-flex;
+  margin-left:6px;
+  padding:1px 6px;
+  border-radius:999px;
+  background:var(--soft-pink);
+  color:var(--pink);
+  font-size:11px;
+  vertical-align:1px;
+}
+
+input,select,textarea{
+  width:100%;
+  border:1px solid #d9d6d2;
+  border-radius:12px;
+  background:#fff;
+  color:var(--ink);
+  min-height:51px;
+  padding:12px 14px;
+  outline:none;
+  transition:border .2s,box-shadow .2s,background .2s;
+}
+textarea{min-height:128px;resize:vertical}
+input:focus,select:focus,textarea:focus{
+  border-color:var(--pink);
+  box-shadow:0 0 0 4px rgba(237,0,125,.11);
+}
+.field.error input,.field.error select,.field.error textarea{
+  border-color:#d92b42;
+  background:#fff7f8;
+}
+.error-message{
+  display:none;
+  margin-top:6px;
+  color:#d92b42;
+  font-size:12px;
+  font-weight:800;
+}
+.field.error .error-message{display:block}
+.consent{
+  margin-top:20px;
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  color:#666;
+  font-size:13px;
+}
+.consent input{
+  width:18px;height:18px;min-height:18px;margin:3px 0 0;accent-color:var(--pink);
+}
+.consent.error{color:#d92b42}
+.consent .error-message{margin:0 0 0 6px}
+
+.form-action{
+  margin-top:25px;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+.submit-button{
+  border:0;
+  min-width:236px;
+  background:var(--pink);
+  color:#fff;
+  box-shadow:0 10px 20px rgba(237,0,125,.23);
+}
+.submit-button:hover{background:var(--pink-dark)}
+.form-note{font-size:12px;color:#777}
+
+.success-message{
+  display:none;
+  margin:22px 0 0;
+  padding:17px 19px;
+  border-radius:15px;
+  background:var(--soft-green);
+  color:#247435;
+  border:1px solid rgba(56,168,82,.28);
+  font-weight:900;
+}
+.success-message.show{display:block}
+
+.access{
+  background:#fff;
+}
+.access-grid{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:26px;
+}
+.access-card,.map-card{
+  border-radius:25px;
+  border:1px solid var(--line);
+  background:#fff;
+  overflow:hidden;
+}
+.access-card{padding:28px}
+.access-card h3{margin:0;font-size:22px}
+.address{
+  margin-top:15px;
+  font-size:17px;
+  font-weight:900;
+  line-height:1.6;
+}
+.access-list{
+  margin:24px 0 0;
+  padding:0;
+  list-style:none;
+  display:grid;
+  gap:12px;
+}
+.access-list li{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  color:#5f5f5f;
+  font-size:14px;
+}
+.pin{
+  margin-top:4px;
+  width:11px;height:11px;border-radius:50% 50% 50% 0;
+  background:var(--pink);
+  transform:rotate(-45deg);
+  flex:0 0 11px;
+}
+
+.map-card{
+  min-height:355px;
+  position:relative;
+  background:
+    linear-gradient(32deg,transparent 47%,rgba(175,159,130,.35) 47% 49%,transparent 49%),
+    linear-gradient(115deg,transparent 45%,rgba(175,159,130,.35) 45% 47%,transparent 47%),
+    linear-gradient(20deg,transparent 48%,rgba(175,159,130,.3) 48% 50%,transparent 50%),
+    radial-gradient(circle at 78% 75%,rgba(56,168,82,.22) 0 45px,transparent 46px),
+    #f9f5ea;
+}
+.map-card:before{
+  content:"";
+  position:absolute;inset:25px;
+  border:2px solid rgba(56,168,82,.7);
+  pointer-events:none;
+}
+.map-road{
+  position:absolute;
+  height:16px;
+  background:#fff;
+  box-shadow:0 0 0 2px rgba(190,179,155,.4);
+  border-radius:999px;
+  transform-origin:left center;
+}
+.road-a{width:100%;left:-6%;top:52%;transform:rotate(-6deg)}
+.road-b{width:82%;left:26%;top:20%;transform:rotate(79deg)}
+.road-c{width:68%;left:13%;bottom:22%;transform:rotate(22deg)}
+.road-d{width:56%;right:-4%;top:30%;transform:rotate(-52deg)}
+.map-place{
+  position:absolute;
+  font-size:12px;
+  font-weight:900;
+  color:#594d45;
+  background:rgba(255,255,255,.76);
+  padding:4px 7px;
+  border-radius:6px;
+}
+.place-a{left:11%;top:14%}
+.place-b{left:39%;top:61%}
+.place-c{right:7%;bottom:13%}
+.place-d{right:14%;top:24%}
+.map-pin{
+  position:absolute;
+  left:61%;top:42%;
+  width:48px;height:48px;
+  border-radius:50% 50% 50% 0;
+  transform:rotate(-45deg);
+  background:var(--pink);
+  box-shadow:0 10px 17px rgba(237,0,125,.28);
+  border:5px solid #fff;
+}
+.map-pin:after{
+  content:"";
+  position:absolute;width:13px;height:13px;border-radius:50%;
+  left:13px;top:13px;background:#fff;
+}
+.map-label{
+  position:absolute;
+  left:calc(61% + 34px);
+  top:calc(42% - 9px);
+  padding:8px 10px;
+  border-radius:9px;
+  background:#fff;
+  color:var(--pink);
+  font-size:12px;
+  font-weight:950;
+  box-shadow:0 8px 18px rgba(0,0,0,.12);
+  white-space:nowrap;
+}
+
+footer{
+  padding:34px 0 94px;
+  background:#292529;
+  color:#fff;
+}
+.footer-inner{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:25px;
+}
+.footer-brand{display:flex;align-items:center;gap:10px}
+.footer-brand .brand-text small{color:rgba(255,255,255,.62)}
+.footer-text{margin:15px 0 0;color:rgba(255,255,255,.66);font-size:12px}
+.footer-links{display:flex;flex-wrap:wrap;gap:15px;font-size:13px;color:rgba(255,255,255,.88)}
+.copyright{margin:16px 0 0;color:rgba(255,255,255,.45);font-size:11px}
+
+.mobile-cta{
+  position:fixed;
+  left:0;right:0;bottom:0;
+  z-index:60;
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  display:none;
+  background:rgba(255,255,255,.95);
+  border-top:1px solid rgba(237,0,125,.15);
+  backdrop-filter:blur(12px);
+}
+.mobile-cta .button{width:100%;min-height:49px}
+
+@media (max-width:920px){
+  .nav{
+    position:absolute;
+    top:76px;
+    right:0;
+    left:0;
+    padding:17px 20px 22px;
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+    gap:8px;
+    background:rgba(255,253,250,.99);
+    border-bottom:1px solid var(--line);
+  }
+  .nav.open{display:flex}
+  .nav a{padding:10px 0}
+  .nav .nav-cta{text-align:center;padding:13px}
+  .menu-button{display:block}
+  .hero{padding:58px 0 66px}
+  .hero-grid{grid-template-columns:1fr;gap:35px}
+  .hero-copy{max-width:none}
+  .hero-visual{min-height:390px}
+  .value-grid,.event-grid{grid-template-columns:1fr}
+  .event-card{min-height:365px}
+  .consult-grid,.access-grid{grid-template-columns:1fr}
+  .consult-visual{min-height:360px}
+  .event-head{align-items:flex-start;flex-direction:column}
+  .event-head-note{max-width:none}
+}
+
+@media (max-width:640px){
+  .top-stripe{height:12px;background-size:auto 12px}
+  .wrap{width:min(100% - 28px,1160px)}
+  .header-inner{min-height:66px}
+  .brand-mark{transform:scale(.86);transform-origin:left center;margin-right:-4px}
+  .brand-text strong{font-size:14px}
+  .brand-text small{font-size:10px}
+  .nav{top:66px}
+  .section{padding:68px 0}
+  .section-title{font-size:30px}
+  .section-lead{font-size:14px}
+  .hero{padding:44px 0 56px}
+  .eyebrow{font-size:11px;padding:8px 11px}
+  .hero-title{font-size:44px}
+  .hero-copy{font-size:15px}
+  .hero-actions{display:grid;grid-template-columns:1fr}
+  .button{width:100%}
+  .hero-visual{min-height:342px}
+  .hero-card{border-width:5px;border-radius:25px}
+  .hero-card-inner{padding:20px 17px 16px}
+  .open-date{right:12px;top:12px;min-width:107px;font-size:14px;padding:8px 10px}
+  .grand-open{font-size:38px;margin-top:4px}
+  .house-scene{min-height:205px}
+  .float-note{font-size:11px;padding:9px 10px}
+  .float-note.one{left:-8px;top:48px}
+  .float-note.two{right:-8px;bottom:23px}
+  .family-bar{padding:21px 0}
+  .family-bar-inner{gap:10px}
+  .family-bar strong{font-size:20px}
+  .value-grid{margin-top:30px}
+  .value-card{padding:23px 19px}
+  .event-grid{margin-top:28px}
+  .event-card{padding:19px;min-height:345px}
+  .event-card h3{font-size:22px}
+  .event-info{padding:14px;align-items:flex-start}
+  .consult-grid{gap:30px}
+  .consult-visual{min-height:320px;border-radius:25px}
+  .speech{width:156px;font-size:12px;left:16px;top:16px}
+  .frame{right:14%;top:17%;transform:scale(.8);transform-origin:top right}
+  .sofa{width:53%;left:8%;transform:scale(.88);transform-origin:left bottom}
+  .plant{right:6%;transform:scale(.78);transform-origin:right bottom}
+  .form-shell{margin-top:29px;border-radius:23px}
+  .form-top{padding:24px 20px}
+  .form-top h3{font-size:21px}
+  form{padding:24px 20px 26px}
+  .form-grid{grid-template-columns:1fr;gap:16px}
+  .field.full{grid-column:auto}
+  .submit-button{min-width:0}
+  .form-action{display:grid;grid-template-columns:1fr}
+  .access-grid{margin-top:30px}
+  .access-card{padding:23px 20px}
+  .map-card{min-height:300px}
+  .footer-inner{display:block}
+  .footer-links{margin-top:20px}
+  .mobile-cta{display:block}
+  footer{padding-bottom:89px}
+}
+</style> </head> <body> <div class="top-stripe"></div> <header> <div class="wrap header-inner"> <a class="brand" href="#top" aria-label="サンリー金沢県庁店 トップへ"> <span class="brand-mark" aria-hidden="true"> <span class="p1"></span> <span class="p2"></span> <span class="p3"></span> <span class="p4"></span> <i></i> </span> <span class="brand-text"> <strong>SunRi.Group 金沢県庁店</strong> <small>売買・賃貸・注文住宅・住まい相談</small> </span> </a>
+  <button class="menu-button" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-nav">
+    <span></span>
+  </button>
+
+  <nav class="nav" id="global-nav" aria-label="メインメニュー">
+    <a href="#events">週末イベント</a>
+    <a href="#consult">住まいの相談</a>
+    <a href="#access">アクセス</a>
+    <a class="nav-cta" href="#form">来店・相談を予約</a>
+  </nav>
+</div>
+</header> <main id="top"> <section class="hero"> <div class="wrap hero-grid"> <div> <div class="eyebrow">金沢県庁前に、新しい家族の週末拠点</div>
+      <h1 class="hero-title">
+        住まい探しも、<br>
+        <span class="accent">週末のおでかけ</span>も。<br>
+        <span class="green">家族で楽しめる</span>場所へ。
+      </h1>
+
+      <p class="hero-copy">
+        サンリー金沢県庁店がグランドオープン。売買・賃貸・注文住宅までの住まい相談に加え、毎週末は子どもが楽しめる体験イベントや、暮らしに役立つ企画を開催します。
+      </p>
+
+      <div class="hero-badges" aria-label="店舗の特徴">
+        <span class="hero-badge"><b>毎週末</b> ファミリーイベント開催</span>
+        <span class="hero-badge"><b>参加無料</b> の企画を順次実施</span>
+        <span class="hero-badge"><b>相談だけ</b> のご来店も歓迎</span>
+      </div>
+
+      <div class="hero-actions">
+        <a class="button button-primary" href="#events">今週末のイベントを見る <span aria-hidden="true">→</span></a>
+        <a class="button button-secondary" href="#form">住まい相談を予約する</a>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-label="サンリー金沢県庁店のイメージ">
+      <div class="float-note one">子どもが笑顔になる<br>週末イベント！</div>
+      <div class="float-note two">相談だけでも<br>大歓迎です</div>
+
+      <div class="hero-card">
+        <div class="card-stripe"></div>
+        <div class="hero-card-inner">
+          <div class="open-date">7月12日<span>日曜日 グランドオープン</span></div>
+          <div class="grand-open">GRAND<span class="green">OPEN</span></div>
+
+          <div class="house-scene" aria-hidden="true">
+            <div class="sun"></div>
+            <div class="cloud"></div>
+            <div class="tree left"></div>
+            <div class="tree right"></div>
+            <div class="ground-line"></div>
+            <div class="house">
+              <div class="roof"></div>
+              <div class="house-body"></div>
+              <div class="house-door"></div>
+              <div class="house-window"></div>
+            </div>
+          </div>
+
+          <div class="mini-event-note">
+            <strong>毎週末開催！</strong>
+            キッズ体験・セミナー・キッチンカー
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="family-bar">
+  <div class="wrap family-bar-inner">
+    <div class="family-dots" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    <strong>サンリー金沢県庁店は、家族の「行ってみよう」が生まれる場所です。</strong>
+    <div class="family-dots" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <h2 class="section-title">「住まいの相談」と「楽しい週末」を、<br>ひとつの場所で。</h2>
+    <p class="section-lead">
+      住まいを探し始めたばかりの方も、将来のために情報を集めたい方も。イベントをきっかけに、気軽に立ち寄れる地域の相談拠点を目指しています。
+    </p>
+
+    <div class="value-grid">
+      <article class="value-card">
+        <div class="value-number">01 FAMILY EVENT</div>
+        <h3>子どもが主役の<br>週末体験</h3>
+        <p>スポーツ、ワークショップ、季節企画など、家族で楽しめるイベントを毎週末に開催します。</p>
+      </article>
+
+      <article class="value-card">
+        <div class="value-number">02 LIFESTYLE</div>
+        <h3>暮らしが少し楽になる<br>学びの時間</h3>
+        <p>整理収納や住まいの工夫など、毎日の生活に役立つセミナー・体験企画を用意します。</p>
+      </article>
+
+      <article class="value-card">
+        <div class="value-number">03 HOME CONSULTATION</div>
+        <h3>家のことを、<br>気軽に相談できる</h3>
+        <p>売買・賃貸・注文住宅まで、今の状況に合わせて相談できます。相談だけのご来店も歓迎です。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section events" id="events">
+  <div class="wrap">
+    <div class="event-head">
+      <div>
+        <h2 class="section-title">毎週末は、何して遊ぶ？</h2>
+        <p class="section-lead">家族の思い出になる体験を。サンリー金沢県庁店では、暮らしと遊びがつながるイベントを順次開催します。</p>
+      </div>
+      <div class="event-head-note">
+        イベントの日時・参加方法は、内容ごとにご案内します。気になる企画は、まずお気軽にお問い合わせください。
+      </div>
+    </div>
+
+    <div class="event-grid">
+      <article class="event-card sport">
+        <div class="event-art" aria-hidden="true">
+          <div class="ball"></div>
+          <div class="net"></div>
+          <div class="person left"></div>
+          <div class="person right"></div>
+        </div>
+        <div class="event-tag">スポーツ体験</div>
+        <h3>PFU選手と楽しむ！<br>バレー体験</h3>
+        <p>体を動かす楽しさを、家族みんなで。初めてでも参加しやすい体験型イベントです。</p>
+        <div class="event-foot">
+          <span>キッズ・親子向け</span>
+          <span>参加無料</span>
+        </div>
+      </article>
+
+      <article class="event-card seminar">
+        <div class="event-art" aria-hidden="true">
+          <div class="box-stack">
+            <div class="box b1"></div>
+            <div class="box b2"></div>
+            <div class="box b3"></div>
+            <div class="hanger"></div>
+          </div>
+        </div>
+        <div class="event-tag">暮らしのセミナー</div>
+        <h3>片付けが楽しくなる！<br>整理収納セミナー</h3>
+        <p>毎日の「どこに置こう」を減らすヒントを、家族の暮らし目線でわかりやすくお届けします。</p>
+        <div class="event-foot">
+          <span>暮らしを整える</span>
+          <span>参加無料</span>
+        </div>
+      </article>
+
+      <article class="event-card food">
+        <div class="event-art" aria-hidden="true">
+          <div class="food-truck">
+            <div class="awning"></div>
+            <div class="steam"></div>
+          </div>
+        </div>
+        <div class="event-tag">週末グルメ</div>
+        <h3>絶品グルメ！<br>キッチンカー</h3>
+        <p>イベントの日は、おいしい時間も一緒に。親子で立ち寄りやすい週末のにぎわいをつくります。</p>
+        <div class="event-foot">
+          <span>家族で楽しむ</span>
+          <span>出店内容は随時更新</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="event-info">
+      <b>ご来店前に</b>
+      <span>イベントは天候や運営状況により内容が変更となる場合があります。参加をご希望の方は、下記フォームからご希望の企画をお知らせください。</span>
+    </div>
+  </div>
+</section>
+
+<section class="section consult" id="consult">
+  <div class="wrap consult-grid">
+    <div>
+      <h2 class="section-title">住まいのことも、<br>家族のこれからも。</h2>
+      <p class="section-lead">
+        「何から始めればいいかわからない」段階でも大丈夫です。住まいの選択肢を整理しながら、今のご家族に合う一歩を一緒に考えます。
+      </p>
+
+      <div class="consult-list">
+        <div class="consult-item"><span class="consult-icon">売</span><span>中古住宅・土地・マンションの購入相談</span></div>
+        <div class="consult-item"><span class="consult-icon">賃</span><span>賃貸物件・住み替えの相談</span></div>
+        <div class="consult-item"><span class="consult-icon">建</span><span>注文住宅・家づくりの相談</span></div>
+        <div class="consult-item"><span class="consult-icon">暮</span><span>収納・間取り・暮らし方の相談</span></div>
+      </div>
+
+      <div class="hero-actions">
+        <a class="button button-primary" href="#form">相談の希望を伝える <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+
+    <div class="consult-visual" aria-label="家族の住まい相談を表すイラスト">
+      <div class="speech">「まだ具体的じゃない」<br>そんな相談も歓迎です。</div>
+      <div class="frame"></div>
+      <div class="sofa"></div>
+      <div class="plant"></div>
+      <div class="floor"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section form-section" id="form">
+  <div class="wrap">
+    <h2 class="section-title">イベント参加・住まい相談のご希望</h2>
+    <p class="section-lead">
+      気になるイベントや住まいのご相談内容をお聞かせください。内容を確認し、店舗からご案内いたします。
+    </p>
+
+    <div class="form-shell">
+      <div class="form-top">
+        <h3>ご来店・ご相談フォーム</h3>
+        <p>入力後、画面内に受付完了メッセージを表示します。外部への送信は行われないデモ仕様です。</p>
+      </div>
+
+      <form id="contactForm" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="purpose">ご希望の内容<span class="required">必須</span></label>
+            <select id="purpose" name="purpose" aria-describedby="purposeError">
+              <option value="">選択してください</option>
+              <option value="イベント参加について">イベント参加について</option>
+              <option value="住まいの相談について">住まいの相談について</option>
+              <option value="店舗見学について">店舗見学について</option>
+              <option value="その他のお問い合わせ">その他のお問い合わせ</option>
+            </select>
+            <div class="error-message" id="purposeError">ご希望の内容を選択してください。</div>
+          </div>
+
+          <div class="field">
+            <label for="event">気になるイベント</label>
+            <select id="event" name="event">
+              <option value="">選択してください</option>
+              <option value="PFU選手と楽しむバレー体験">PFU選手と楽しむバレー体験</option>
+              <option value="整理収納セミナー">整理収納セミナー</option>
+              <option value="キッチンカー">キッチンカー</option>
+              <option value="今後のイベント情報を知りたい">今後のイベント情報を知りたい</option>
+              <option value="住まい相談を希望">住まい相談を希望</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="name">お名前<span class="required">必須</span></label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="例：山田 花子" aria-describedby="nameError">
+            <div class="error-message" id="nameError">お名前を入力してください。</div>
+          </div>
+
+          <div class="field">
+            <label for="phone">電話番号<span class="required">必須</span></label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="例：09012345678" aria-describedby="phoneError">
+            <div class="error-message" id="phoneError">電話番号を正しく入力してください。</div>
+          </div>
+
+          <div class="field">
+            <label for="email">メールアドレス<span class="required">必須</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="例：sample@example.com" aria-describedby="emailError">
+            <div class="error-message" id="emailError">メールアドレスを正しく入力してください。</div>
+          </div>
+
+          <div class="field">
+            <label for="visit">ご来店の目安</label>
+            <select id="visit" name="visit">
+              <option value="">選択してください</option>
+              <option value="今週末に来店したい">今週末に来店したい</option>
+              <option value="今月中に来店したい">今月中に来店したい</option>
+              <option value="日時は相談したい">日時は相談したい</option>
+              <option value="まずはイベント情報を知りたい">まずはイベント情報を知りたい</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="message">ご質問・ご要望</label>
+            <textarea id="message" name="message" placeholder="イベント参加人数、住まいについて気になっていることなどをご入力ください。"></textarea>
+          </div>
+        </div>
+
+        <label class="consent" id="consentWrap">
+          <input id="consent" name="consent" type="checkbox" aria-describedby="consentError">
+          <span>入力内容を確認し、サンリー金沢県庁店からのご案内を希望します。<span class="required">必須</span><span class="error-message" id="consentError">確認チェックを入れてください。</span></span>
+        </label>
+
+        <div class="form-action">
+          <button class="button submit-button" type="submit">内容を送信する</button>
+          <span class="form-note">送信先へは接続せず、画面内で受付完了を表示します。</span>
+        </div>
+
+        <div class="success-message" id="successMessage" role="status" aria-live="polite">
+          声を受け付けました。ご協力ありがとうございます。
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section access" id="access">
+  <div class="wrap">
+    <h2 class="section-title">金沢県庁前。<br>週末のおでかけ途中にも立ち寄りやすい場所です。</h2>
+    <p class="section-lead">イベント帰りやお買い物の合間にも、お気軽にお越しください。</p>
+
+    <div class="access-grid">
+      <div class="access-card">
+        <h3>サンリー金沢県庁店</h3>
+        <div class="address">〒921-8203<br>石川県金沢市鞍月5丁目74</div>
+
+        <ul class="access-list">
+          <li><span class="pin"></span><span>石川県庁・石川県地場産業振興センター周辺</span></li>
+          <li><span class="pin"></span><span>金沢ビーンズ、モアカフェ、ミスタードーナツ近隣</span></li>
+          <li><span class="pin"></span><span>ご家族でのご来店、イベントのみのご参加も歓迎です</span></li>
+        </ul>
+      </div>
+
+      <div class="map-card" aria-label="サンリー金沢県庁店 周辺地図のイメージ">
+        <div class="map-road road-a"></div>
+        <div class="map-road road-b"></div>
+        <div class="map-road road-c"></div>
+        <div class="map-road road-d"></div>
+        <div class="map-place place-a">金沢ビーンズ</div>
+        <div class="map-place place-b">石川県庁</div>
+        <div class="map-place place-c">石川県中央病院</div>
+        <div class="map-place place-d">モアカフェ</div>
+        <div class="map-pin"></div>
+        <div class="map-label">サンリー金沢県庁店</div>
+      </div>
+    </div>
+  </div>
+</section>
+</main> <footer> <div class="wrap footer-inner"> <div> <div class="footer-brand"> <span class="brand-mark" aria-hidden="true"> <span class="p1"></span> <span class="p2"></span> <span class="p3"></span> <span class="p4"></span> <i></i> </span> <span class="brand-text"> <strong>SunRi.Group 金沢県庁店</strong> <small>売買・賃貸・注文住宅・住まい相談</small> </span> </div> <p class="footer-text">〒921-8203 石川県金沢市鞍月5丁目74</p> <p class="copyright">© SunRi.Group Kanazawa Kencho Store</p> </div>
+  <div class="footer-links">
+    <a href="#events">週末イベント</a>
+    <a href="#consult">住まいの相談</a>
+    <a href="#form">来店・相談予約</a>
+    <a href="#access">アクセス</a>
+  </div>
+</div>
+</footer> <div class="mobile-cta"> <a class="button button-primary" href="#form">イベント・住まい相談を予約する</a> </div> <script> (function () { const menuButton = document.querySelector(".menu-button"); const nav = document.querySelector(".nav"); menuButton.addEventListener("click", function () { const isOpen = nav.classList.toggle("open"); menuButton.classList.toggle("active", isOpen); menuButton.setAttribute("aria-expanded", String(isOpen)); menuButton.setAttribute("aria-label", isOpen ? "メニューを閉じる" : "メニューを開く"); }); nav.querySelectorAll("a").forEach(function (link) { link.addEventListener("click", function () { nav.classList.remove("open"); menuButton.classList.remove("active"); menuButton.setAttribute("aria-expanded", "false"); menuButton.setAttribute("aria-label", "メニューを開く"); }); }); const form = document.getElementById("contactForm"); const successMessage = document.getElementById("successMessage"); const rules = [ { id: "purpose", validate: function (value) { return value.trim() !== ""; } }, { id: "name", validate: function (value) { return value.trim().length >= 2; } }, { id: "phone", validate: function (value) { return /^[0-9０-９\-\s]{9,16}$/.test(value.trim()); } }, { id: "email", validate: function (value) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()); } } ]; function setFieldState(input, valid) { const field = input.closest(".field"); if (!field) return; field.classList.toggle("error", !valid); input.setAttribute("aria-invalid", String(!valid)); } rules.forEach(function (rule) { const input = document.getElementById(rule.id); input.addEventListener("input", function () { setFieldState(input, rule.validate(input.value)); }); input.addEventListener("change", function () { setFieldState(input, rule.validate(input.value)); }); }); document.getElementById("consent").addEventListener("change", function () { document.getElementById("consentWrap").classList.toggle("error", !this.checked); }); form.addEventListener("submit", function (event) { event.preventDefault(); let isValid = true; let firstInvalid = null; rules.forEach(function (rule) { const input = document.getElementById(rule.id); const valid = rule.validate(input.value); setFieldState(input, valid); if (!valid) { isValid = false; if (!firstInvalid) firstInvalid = input; } }); const consent = document.getElementById("consent"); const consentWrap = document.getElementById("consentWrap"); consentWrap.classList.toggle("error", !consent.checked); if (!consent.checked) { isValid = false; if (!firstInvalid) firstInvalid = consent; } if (!isValid) { successMessage.classList.remove("show"); firstInvalid.focus(); return; } successMessage.classList.add("show"); successMessage.scrollIntoView({ behavior: "smooth", block: "center" }); form.reset(); form.querySelectorAll(".field").forEach(function (field) { field.classList.remove("error"); }); consentWrap.classList.remove("error"); }); })(); </script> </body> </html>
